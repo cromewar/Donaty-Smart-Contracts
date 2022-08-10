@@ -28,6 +28,8 @@ contract DonatyGovernor is
         GovernorTimelockControl(_timelock)
     {}
 
+    //events
+
     // The following functions are overrides required by Solidity.
 
     function votingDelay()
