@@ -9,6 +9,7 @@ contract DonatyNFTFactory {
     event newNFTContractCreated(
         address indexed _nftArtist,
         address indexed contractAddress,
+        string _title,
         uint256 _goal,
         string indexed _initialDate,
         string _dueDate,
@@ -20,7 +21,8 @@ contract DonatyNFTFactory {
     event newStepAdded(
         string _description,
         string _initialDate,
-        string _dueDate
+        string _dueDate,
+        address _contractAddress
     );
 
     // Array for contracts.
@@ -36,6 +38,7 @@ contract DonatyNFTFactory {
         uint256 _goal,
         string[] memory _stepsInitialDate,
         string[] memory _stepsDueDate,
+        string memory _title,
         string memory _initialDate,
         string memory _dueDate,
         uint256 _duration,
@@ -49,6 +52,7 @@ contract DonatyNFTFactory {
         emit newNFTContractCreated(
             msg.sender,
             address(newNFTContract),
+            _title,
             _goal,
             _initialDate,
             _dueDate,
@@ -56,7 +60,7 @@ contract DonatyNFTFactory {
             _stepDivision,
             _ipfsImage
         );
-        emitEventForStep(_descriptionSteps, _stepsInitialDate, _stepsDueDate);
+        emitEventForStep(_descriptionSteps, _stepsInitialDate, _stepsDueDate, address(newNFTContract));
     }
 
     function getNFTContract(uint256 _index) public view returns (address) {
@@ -66,10 +70,11 @@ contract DonatyNFTFactory {
     function emitEventForStep(
         string[] memory _steps,
         string[] memory _initialDate,
-        string[] memory _dueDate
+        string[] memory _dueDate,
+        address memory _contractAddress
     ) internal {
         for (uint256 i = 0; i < _steps.length; i++) {
-            emit newStepAdded(_steps[i], _initialDate[i], _dueDate[i]);
+            emit newStepAdded(_steps[i], _initialDate[i], _dueDate[i], _contractAddress);
         }
     }
 }
