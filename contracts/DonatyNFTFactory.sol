@@ -60,7 +60,12 @@ contract DonatyNFTFactory {
             _stepDivision,
             _ipfsImage
         );
-        emitEventForStep(_descriptionSteps, _stepsInitialDate, _stepsDueDate, address(newNFTContract));
+        emitEventForStep(
+            _descriptionSteps,
+            _stepsInitialDate,
+            _stepsDueDate,
+            address(newNFTContract)
+        );
     }
 
     function getNFTContract(uint256 _index) public view returns (address) {
@@ -71,10 +76,15 @@ contract DonatyNFTFactory {
         string[] memory _steps,
         string[] memory _initialDate,
         string[] memory _dueDate,
-        address memory _contractAddress
+        address _contractAddress
     ) internal {
         for (uint256 i = 0; i < _steps.length; i++) {
-            emit newStepAdded(_steps[i], _initialDate[i], _dueDate[i], _contractAddress);
+            emit newStepAdded(
+                _steps[i],
+                _initialDate[i],
+                _dueDate[i],
+                _contractAddress
+            );
         }
     }
 }
