@@ -18,14 +18,6 @@ contract DonatyGovernanceFactory {
     function createNewDao(IVotes _token, TimelockController _timeLock) public {
         DonatyGovernor dao = new DonatyGovernor(_token, _timeLock);
 
-        bytes32 timeLockExecuterRole = _timeLock.EXECUTOR_ROLE();
-        bytes32 timeLockProposerRole = _timeLock.PROPOSER_ROLE();
-        bytes32 timeLockCancellerRole = _timeLock.CANCELLER_ROLE();
-
-        _timeLock.grantRole(timeLockExecuterRole, address(dao));
-        _timeLock.grantRole(timeLockProposerRole, address(dao));
-        _timeLock.grantRole(timeLockCancellerRole, address(dao));
-
         // add Dao to the list
         donatyDaos.push(dao);
 

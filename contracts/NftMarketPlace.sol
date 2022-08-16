@@ -4,6 +4,8 @@ pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 
 // Some errors in case some of the requirements are not met.
 
@@ -16,7 +18,8 @@ error NotOwner();
 error NotApprovedForMarketplace();
 error PriceMustBeAboveZero();
 
-contract NftMarketPlace is ReentrancyGuard {
+contract NftMarketPlace is ReentrancyGuard, Ownable {
+    using SafeMath for uint256;
     struct Listing {
         uint256 price;
         address seller; //Always the contract creator
@@ -150,8 +153,13 @@ contract NftMarketPlace is ReentrancyGuard {
         if (msg.value < listedItem.price) {
             revert PriceNotMet(nftAddress, tokenId, listedItem.price);
         }
-        s_proceeds[listedItem.seller] += msg.value;
+
+        uint256 sellerProfit = msg.value.div(5);
+        uint256 projectProfit = msg.value.mul(100).div(80);
+        s_proceeds[address(this)] += projectProfit;
+        s_proceeds[listedItem.seller] += sellerProfit;
         delete (s_listings[nftAddress][tokenId]);
+
         IERC721(nftAddress).safeTransferFrom(
             listedItem.seller,
             msg.sender,
@@ -190,6 +198,27 @@ contract NftMarketPlace is ReentrancyGuard {
         }
         s_proceeds[msg.sender] = 0;
         (bool success, ) = payable(msg.sender).call{value: proceeds}("");
+        require(success, "Transfer failed");
+    }
+
+    /*
+     * @notice Method for getting the balance of the contract
+     */
+    function getBalance() external view returns (uint256) {
+        return s_proceeds[address(this)];
+    }
+
+    /*
+     * @notice Method for sendint the balance of the contract to organization address
+     */
+
+    function sendBalanceToOrganization(address _nonProfiAddress)
+        public
+        onlyOwner
+    {
+        (bool success, ) = payable(_nonProfiAddress).call{
+            value: s_proceeds[address(this)]
+        }("");
         require(success, "Transfer failed");
     }
 
