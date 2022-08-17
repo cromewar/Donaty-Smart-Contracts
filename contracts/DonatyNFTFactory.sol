@@ -11,7 +11,7 @@ contract DonatyNFTFactory {
         address indexed contractAddress,
         string title,
         uint256 goal,
-        string indexed initialDate,
+        string initialDate,
         string dueDate,
         uint256 duration,
         uint256 steps,
