@@ -7,22 +7,22 @@ import "./DonatyNFT.sol";
 contract DonatyNFTFactory {
     //events
     event newNFTContractCreated(
-        address indexed _nftArtist,
+        address indexed nftArtist,
         address indexed contractAddress,
-        string _title,
-        uint256 _goal,
-        string indexed _initialDate,
-        string _dueDate,
-        uint256 _duration,
-        uint256 _steps,
-        string _ipfsImage
+        string title,
+        uint256 goal,
+        string indexed initialDate,
+        string dueDate,
+        uint256 duration,
+        uint256 steps,
+        string ipfsImage
     );
 
     event newStepAdded(
-        string _description,
-        string _initialDate,
-        string _dueDate,
-        address _contractAddress
+        string description,
+        string initialDate,
+        string dueDate,
+        address contractAddress
     );
 
     // Array for contracts.
