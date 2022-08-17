@@ -19,7 +19,6 @@ contract DonatyNFT is ERC721Votes, ERC721URIStorage, Ownable {
 
     function createCollectible(address owner, string memory _tokenURI)
         public
-        onlyOwner
         returns (uint256)
     {
         uint256 newItemId = _tokenIds.current();
