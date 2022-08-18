@@ -6,6 +6,8 @@ import "./governance/TimeLock.sol";
 
 contract TimeLockFactory {
     TimeLock[] public timeLocks;
+    bytes32 public constant TIMELOCK_ADMIN_ROLE =
+        keccak256("TIMELOCK_ADMIN_ROLE");
 
     event newTimeLockCreated(address indexed _timeLockAddress);
 
@@ -19,6 +21,11 @@ contract TimeLockFactory {
         timeLocks.push(timeLock);
 
         emit newTimeLockCreated(address(timeLock));
+    }
+
+    function giveAdminControl(uint256 _timeLock) public {
+        TimeLock timeLock = timeLocks[_timeLock];
+        timeLock.grantRole(TIMELOCK_ADMIN_ROLE, msg.sender);
     }
 
     function getTimeLock(uint256 _index) public view returns (address) {

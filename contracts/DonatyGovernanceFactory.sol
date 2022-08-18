@@ -1,32 +1,28 @@
-//SPDX-License-Idenfier: MIt
+//SPDX-License-Identifier: MIT
+
+import "./governance/DonatyGovernor.sol";
+import "@openzeppelin/contracts/governance/extensions/GovernorTimelockControl.sol";
 
 pragma solidity ^0.8.0;
 
-import "./governance/DonatyGovernor.sol";
-import "./governance/TimeLock.sol";
-
 contract DonatyGovernanceFactory {
-    // Daos Array
-    DonatyGovernor[] public donatyDaos;
+    DonatyGovernor[] public governors;
 
-    event newDaoCreated(
-        address indexed _daoAddress,
-        address indexed _timeLockAddress
-    );
-
-    // Functions
-    function createNewDao(IVotes _token, TimelockController _timeLock) public {
-        DonatyGovernor dao = new DonatyGovernor(_token, _timeLock);
-
-        // add Dao to the list
-        donatyDaos.push(dao);
-
-        // event emission
-
-        emit newDaoCreated(address(dao), address(_timeLock));
+    function createNewDao(IVotes _token, TimelockController _timelock) public {
+        DonatyGovernor newGovernor = new DonatyGovernor(_token, _timelock);
+        governors.push(newGovernor);
     }
 
-    function getDaoAddress(uint256 _index) public view returns (address) {
-        return address(donatyDaos[_index]);
+    function getGovernor(uint256 _index) public view returns (address) {
+        return address(governors[_index]);
     }
 }
+
+//  function grantRole(bytes32 role, address account) public virtual override onlyRole(getRoleAdmin(role)) {
+//         _grantRole(role, account);
+//     }
+
+// bytes32 public constant TIMELOCK_ADMIN_ROLE = keccak256("TIMELOCK_ADMIN_ROLE");
+//     bytes32 public constant PROPOSER_ROLE = keccak256("PROPOSER_ROLE");
+//     bytes32 public constant EXECUTOR_ROLE = keccak256("EXECUTOR_ROLE");
+//     bytes32 public constant CANCELLER_ROLE = keccak256("CANCELLER_ROLE");
