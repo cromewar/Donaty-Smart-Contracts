@@ -561,66 +561,66 @@
     "absolutePath": "/home/crome/.brownie/packages/OpenZeppelin/openzeppelin-contracts@4.7.2/contracts/token/ERC721/extensions/draft-ERC721Votes.sol",
     "exportedSymbols": {
       "Address": [
-        7376
+        7426
       ],
       "Checkpoints": [
-        10720
+        10729
       ],
       "Context": [
-        5392
+        5442
       ],
       "Counters": [
-        1674
+        2060
       ],
       "ECDSA": [
-        7997
+        8047
       ],
       "EIP712": [
-        8151
+        8201
       ],
       "ERC165": [
-        8175
+        8225
       ],
       "ERC721": [
-        6259
+        6309
       ],
       "ERC721Votes": [
-        1600
+        1986
       ],
       "IERC165": [
-        6725
+        6775
       ],
       "IERC721": [
-        1830
+        2216
       ],
       "IERC721Metadata": [
-        11067
+        11076
       ],
       "IERC721Receiver": [
-        7081
+        7131
       ],
       "IVotes": [
-        10486
+        10495
       ],
       "Math": [
-        11797
+        11806
       ],
       "SafeCast": [
-        10026
+        10076
       ],
       "Strings": [
-        11293
+        11302
       ],
       "Votes": [
-        6713
+        6763
       ]
     },
-    "id": 1601,
+    "id": 1987,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1552,
+        "id": 1938,
         "literals": [
           "solidity",
           "^",
@@ -633,11 +633,11 @@
       {
         "absolutePath": "/home/crome/.brownie/packages/OpenZeppelin/openzeppelin-contracts@4.7.2/contracts/token/ERC721/ERC721.sol",
         "file": "../ERC721.sol",
-        "id": 1553,
+        "id": 1939,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 1601,
-        "sourceUnit": 6260,
+        "scope": 1987,
+        "sourceUnit": 6310,
         "src": "154:23:21",
         "symbolAliases": [],
         "unitAlias": ""
@@ -645,11 +645,11 @@
       {
         "absolutePath": "/home/crome/.brownie/packages/OpenZeppelin/openzeppelin-contracts@4.7.2/contracts/governance/utils/Votes.sol",
         "file": "../../../governance/utils/Votes.sol",
-        "id": 1554,
+        "id": 1940,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 1601,
-        "sourceUnit": 6714,
+        "scope": 1987,
+        "sourceUnit": 6764,
         "src": "178:45:21",
         "symbolAliases": [],
         "unitAlias": ""
@@ -659,25 +659,25 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 1556,
+              "id": 1942,
               "name": "ERC721",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 6259,
+              "referencedDeclaration": 6309,
               "src": "783:6:21"
             },
-            "id": 1557,
+            "id": 1943,
             "nodeType": "InheritanceSpecifier",
             "src": "783:6:21"
           },
           {
             "baseName": {
-              "id": 1558,
+              "id": 1944,
               "name": "Votes",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 6713,
+              "referencedDeclaration": 6763,
               "src": "791:5:21"
             },
-            "id": 1559,
+            "id": 1945,
             "nodeType": "InheritanceSpecifier",
             "src": "791:5:21"
           }
@@ -686,24 +686,24 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "documentation": {
-          "id": 1555,
+          "id": 1941,
           "nodeType": "StructuredDocumentation",
           "src": "225:524:21",
           "text": " @dev Extension of ERC721 to support voting and delegation as implemented by {Votes}, where each individual NFT counts\n as 1 vote unit.\n Tokens do not count as votes until they are delegated, because votes must be tracked which incurs an additional cost\n on every transfer. Token holders can either delegate to a trusted representative who will decide how to make use of\n the votes in governance decisions, or they can delegate to themselves to be their own representative.\n _Available since v4.5._"
         },
         "fullyImplemented": false,
-        "id": 1600,
+        "id": 1986,
         "linearizedBaseContracts": [
-          1600,
-          6713,
-          8151,
-          6259,
-          11067,
-          1830,
-          8175,
-          6725,
-          5392,
-          10486
+          1986,
+          6763,
+          8201,
+          6309,
+          11076,
+          2216,
+          8225,
+          6775,
+          5442,
+          10495
         ],
         "name": "ERC721Votes",
         "nameLocation": "768:11:21",
@@ -711,10 +711,10 @@
         "nodes": [
           {
             "baseFunctions": [
-              6258
+              6308
             ],
             "body": {
-              "id": 1584,
+              "id": 1970,
               "nodeType": "Block",
               "src": "1060:104:21",
               "statements": [
@@ -722,11 +722,11 @@
                   "expression": {
                     "arguments": [
                       {
-                        "id": 1571,
+                        "id": 1957,
                         "name": "from",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1562,
+                        "referencedDeclaration": 1948,
                         "src": "1091:4:21",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -734,11 +734,11 @@
                         }
                       },
                       {
-                        "id": 1572,
+                        "id": 1958,
                         "name": "to",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1564,
+                        "referencedDeclaration": 1950,
                         "src": "1097:2:21",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -747,7 +747,7 @@
                       },
                       {
                         "hexValue": "31",
-                        "id": 1573,
+                        "id": 1959,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -777,18 +777,18 @@
                           "typeString": "int_const 1"
                         }
                       ],
-                      "id": 1570,
+                      "id": 1956,
                       "name": "_transferVotingUnits",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6550,
+                      "referencedDeclaration": 6600,
                       "src": "1070:20:21",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
                         "typeString": "function (address,address,uint256)"
                       }
                     },
-                    "id": 1574,
+                    "id": 1960,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -803,7 +803,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1575,
+                  "id": 1961,
                   "nodeType": "ExpressionStatement",
                   "src": "1070:33:21"
                 },
@@ -811,11 +811,11 @@
                   "expression": {
                     "arguments": [
                       {
-                        "id": 1579,
+                        "id": 1965,
                         "name": "from",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1562,
+                        "referencedDeclaration": 1948,
                         "src": "1139:4:21",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -823,11 +823,11 @@
                         }
                       },
                       {
-                        "id": 1580,
+                        "id": 1966,
                         "name": "to",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1564,
+                        "referencedDeclaration": 1950,
                         "src": "1145:2:21",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -835,11 +835,11 @@
                         }
                       },
                       {
-                        "id": 1581,
+                        "id": 1967,
                         "name": "tokenId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1566,
+                        "referencedDeclaration": 1952,
                         "src": "1149:7:21",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -863,32 +863,32 @@
                         }
                       ],
                       "expression": {
-                        "id": 1576,
+                        "id": 1962,
                         "name": "super",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": -25,
                         "src": "1113:5:21",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_super$_ERC721Votes_$1600_$",
+                          "typeIdentifier": "t_type$_t_super$_ERC721Votes_$1986_$",
                           "typeString": "type(contract super ERC721Votes)"
                         }
                       },
-                      "id": 1578,
+                      "id": 1964,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "_afterTokenTransfer",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 6258,
+                      "referencedDeclaration": 6308,
                       "src": "1113:25:21",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
                         "typeString": "function (address,address,uint256)"
                       }
                     },
-                    "id": 1582,
+                    "id": 1968,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -903,19 +903,19 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1583,
+                  "id": 1969,
                   "nodeType": "ExpressionStatement",
                   "src": "1113:44:21"
                 }
               ]
             },
             "documentation": {
-              "id": 1560,
+              "id": 1946,
               "nodeType": "StructuredDocumentation",
               "src": "803:124:21",
               "text": " @dev Adjusts votes when tokens are transferred.\n Emits a {Votes-DelegateVotesChanged} event."
             },
-            "id": 1585,
+            "id": 1971,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -923,23 +923,23 @@
             "nameLocation": "941:19:21",
             "nodeType": "FunctionDefinition",
             "overrides": {
-              "id": 1568,
+              "id": 1954,
               "nodeType": "OverrideSpecifier",
               "overrides": [],
               "src": "1051:8:21"
             },
             "parameters": {
-              "id": 1567,
+              "id": 1953,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1562,
+                  "id": 1948,
                   "mutability": "mutable",
                   "name": "from",
                   "nameLocation": "978:4:21",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1585,
+                  "scope": 1971,
                   "src": "970:12:21",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -948,7 +948,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1561,
+                    "id": 1947,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "970:7:21",
@@ -962,12 +962,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 1564,
+                  "id": 1950,
                   "mutability": "mutable",
                   "name": "to",
                   "nameLocation": "1000:2:21",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1585,
+                  "scope": 1971,
                   "src": "992:10:21",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -976,7 +976,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1563,
+                    "id": 1949,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "992:7:21",
@@ -990,12 +990,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 1566,
+                  "id": 1952,
                   "mutability": "mutable",
                   "name": "tokenId",
                   "nameLocation": "1020:7:21",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1585,
+                  "scope": 1971,
                   "src": "1012:15:21",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1004,7 +1004,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1565,
+                    "id": 1951,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1012:7:21",
@@ -1019,12 +1019,12 @@
               "src": "960:73:21"
             },
             "returnParameters": {
-              "id": 1569,
+              "id": 1955,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1060:0:21"
             },
-            "scope": 1600,
+            "scope": 1986,
             "src": "932:232:21",
             "stateMutability": "nonpayable",
             "virtual": true,
@@ -1032,10 +1032,10 @@
           },
           {
             "baseFunctions": [
-              6712
+              6762
             ],
             "body": {
-              "id": 1598,
+              "id": 1984,
               "nodeType": "Block",
               "src": "1323:42:21",
               "statements": [
@@ -1043,11 +1043,11 @@
                   "expression": {
                     "arguments": [
                       {
-                        "id": 1595,
+                        "id": 1981,
                         "name": "account",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1588,
+                        "referencedDeclaration": 1974,
                         "src": "1350:7:21",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1062,18 +1062,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 1594,
+                      "id": 1980,
                       "name": "balanceOf",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 5510,
+                      "referencedDeclaration": 5560,
                       "src": "1340:9:21",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_uint256_$",
                         "typeString": "function (address) view returns (uint256)"
                       }
                     },
-                    "id": 1596,
+                    "id": 1982,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1088,20 +1088,20 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 1593,
-                  "id": 1597,
+                  "functionReturnParameters": 1979,
+                  "id": 1983,
                   "nodeType": "Return",
                   "src": "1333:25:21"
                 }
               ]
             },
             "documentation": {
-              "id": 1586,
+              "id": 1972,
               "nodeType": "StructuredDocumentation",
               "src": "1170:57:21",
               "text": " @dev Returns the balance of `account`."
             },
-            "id": 1599,
+            "id": 1985,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -1109,23 +1109,23 @@
             "nameLocation": "1241:15:21",
             "nodeType": "FunctionDefinition",
             "overrides": {
-              "id": 1590,
+              "id": 1976,
               "nodeType": "OverrideSpecifier",
               "overrides": [],
               "src": "1296:8:21"
             },
             "parameters": {
-              "id": 1589,
+              "id": 1975,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1588,
+                  "id": 1974,
                   "mutability": "mutable",
                   "name": "account",
                   "nameLocation": "1265:7:21",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1599,
+                  "scope": 1985,
                   "src": "1257:15:21",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1134,7 +1134,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1587,
+                    "id": 1973,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1257:7:21",
@@ -1150,17 +1150,17 @@
               "src": "1256:17:21"
             },
             "returnParameters": {
-              "id": 1593,
+              "id": 1979,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1592,
+                  "id": 1978,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1599,
+                  "scope": 1985,
                   "src": "1314:7:21",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1169,7 +1169,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1591,
+                    "id": 1977,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1314:7:21",
@@ -1183,14 +1183,14 @@
               ],
               "src": "1313:9:21"
             },
-            "scope": 1600,
+            "scope": 1986,
             "src": "1232:133:21",
             "stateMutability": "view",
             "virtual": true,
             "visibility": "internal"
           }
         ],
-        "scope": 1601,
+        "scope": 1987,
         "src": "750:617:21",
         "usedErrors": []
       }

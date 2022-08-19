@@ -98,60 +98,60 @@
     "absolutePath": "contracts/NFTMarketPlaceFactory.sol",
     "exportedSymbols": {
       "AlreadyListed": [
-        482
+        465
       ],
       "Context": [
-        5392
+        5442
       ],
       "IERC165": [
-        6725
+        6775
       ],
       "IERC721": [
-        1830
+        2216
       ],
       "ItemNotForSale": [
-        470
+        453
       ],
       "NFTMarketPlaceFactory": [
-        450
+        433
       ],
       "NftMarketPlace": [
-        991
+        974
       ],
       "NoProceeds": [
-        484
+        467
       ],
       "NotApprovedForMarketplace": [
-        488
+        471
       ],
       "NotListed": [
-        476
+        459
       ],
       "NotOwner": [
-        486
+        469
       ],
       "Ownable": [
-        1425
+        1811
       ],
       "PriceMustBeAboveZero": [
-        490
+        473
       ],
       "PriceNotMet": [
-        464
+        447
       ],
       "ReentrancyGuard": [
-        1714
+        2100
       ],
       "SafeMath": [
-        2142
+        2528
       ]
     },
-    "id": 451,
+    "id": 434,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 392,
+        "id": 375,
         "literals": [
           "solidity",
           "^",
@@ -164,11 +164,11 @@
       {
         "absolutePath": "contracts/NftMarketPlace.sol",
         "file": "./NftMarketPlace.sol",
-        "id": 393,
+        "id": 376,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 451,
-        "sourceUnit": 992,
+        "scope": 434,
+        "sourceUnit": 975,
         "src": "57:30:39",
         "symbolAliases": [],
         "unitAlias": ""
@@ -176,11 +176,11 @@
       {
         "absolutePath": "/home/crome/.brownie/packages/OpenZeppelin/openzeppelin-contracts@4.7.2/contracts/access/Ownable.sol",
         "file": "@openzeppelin/contracts/access/Ownable.sol",
-        "id": 394,
+        "id": 377,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 451,
-        "sourceUnit": 1426,
+        "scope": 434,
+        "sourceUnit": 1812,
         "src": "88:52:39",
         "symbolAliases": [],
         "unitAlias": ""
@@ -190,28 +190,28 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 395,
+              "id": 378,
               "name": "Ownable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 1425,
+              "referencedDeclaration": 1811,
               "src": "176:7:39"
             },
-            "id": 396,
+            "id": 379,
             "nodeType": "InheritanceSpecifier",
             "src": "176:7:39"
           }
         ],
         "canonicalName": "NFTMarketPlaceFactory",
         "contractDependencies": [
-          991
+          974
         ],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 450,
+        "id": 433,
         "linearizedBaseContracts": [
-          450,
-          1425,
-          5392
+          433,
+          1811,
+          5442
         ],
         "name": "NFTMarketPlaceFactory",
         "nameLocation": "151:21:39",
@@ -220,42 +220,42 @@
           {
             "constant": false,
             "functionSelector": "2b64deec",
-            "id": 400,
+            "id": 383,
             "mutability": "mutable",
             "name": "marketplaces",
             "nameLocation": "214:12:39",
             "nodeType": "VariableDeclaration",
-            "scope": 450,
+            "scope": 433,
             "src": "190:36:39",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_array$_t_contract$_NftMarketPlace_$991_$dyn_storage",
+              "typeIdentifier": "t_array$_t_contract$_NftMarketPlace_$974_$dyn_storage",
               "typeString": "contract NftMarketPlace[]"
             },
             "typeName": {
               "baseType": {
-                "id": 398,
+                "id": 381,
                 "nodeType": "UserDefinedTypeName",
                 "pathNode": {
-                  "id": 397,
+                  "id": 380,
                   "name": "NftMarketPlace",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 991,
+                  "referencedDeclaration": 974,
                   "src": "190:14:39"
                 },
-                "referencedDeclaration": 991,
+                "referencedDeclaration": 974,
                 "src": "190:14:39",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_contract$_NftMarketPlace_$991",
+                  "typeIdentifier": "t_contract$_NftMarketPlace_$974",
                   "typeString": "contract NftMarketPlace"
                 }
               },
-              "id": 399,
+              "id": 382,
               "nodeType": "ArrayTypeName",
               "src": "190:16:39",
               "typeDescriptions": {
-                "typeIdentifier": "t_array$_t_contract$_NftMarketPlace_$991_$dyn_storage_ptr",
+                "typeIdentifier": "t_array$_t_contract$_NftMarketPlace_$974_$dyn_storage_ptr",
                 "typeString": "contract NftMarketPlace[]"
               }
             },
@@ -263,7 +263,7 @@
           },
           {
             "body": {
-              "id": 433,
+              "id": 416,
               "nodeType": "Block",
               "src": "289:207:39",
               "statements": [
@@ -275,17 +275,17 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 411,
+                        "id": 394,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
-                          "id": 406,
+                          "id": 389,
                           "name": "_ownerDao",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 402,
+                          "referencedDeclaration": 385,
                           "src": "307:9:39",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -298,7 +298,7 @@
                           "arguments": [
                             {
                               "hexValue": "30",
-                              "id": 409,
+                              "id": 392,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -320,7 +320,7 @@
                                 "typeString": "int_const 0"
                               }
                             ],
-                            "id": 408,
+                            "id": 391,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -332,14 +332,14 @@
                               "typeString": "type(address)"
                             },
                             "typeName": {
-                              "id": 407,
+                              "id": 390,
                               "name": "address",
                               "nodeType": "ElementaryTypeName",
                               "src": "320:7:39",
                               "typeDescriptions": {}
                             }
                           },
-                          "id": 410,
+                          "id": 393,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -368,7 +368,7 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 405,
+                      "id": 388,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -382,7 +382,7 @@
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 412,
+                    "id": 395,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -397,56 +397,56 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 413,
+                  "id": 396,
                   "nodeType": "ExpressionStatement",
                   "src": "299:32:39"
                 },
                 {
                   "assignments": [
-                    416
+                    399
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 416,
+                      "id": 399,
                       "mutability": "mutable",
                       "name": "newMarketPlace",
                       "nameLocation": "356:14:39",
                       "nodeType": "VariableDeclaration",
-                      "scope": 433,
+                      "scope": 416,
                       "src": "341:29:39",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_NftMarketPlace_$991",
+                        "typeIdentifier": "t_contract$_NftMarketPlace_$974",
                         "typeString": "contract NftMarketPlace"
                       },
                       "typeName": {
-                        "id": 415,
+                        "id": 398,
                         "nodeType": "UserDefinedTypeName",
                         "pathNode": {
-                          "id": 414,
+                          "id": 397,
                           "name": "NftMarketPlace",
                           "nodeType": "IdentifierPath",
-                          "referencedDeclaration": 991,
+                          "referencedDeclaration": 974,
                           "src": "341:14:39"
                         },
-                        "referencedDeclaration": 991,
+                        "referencedDeclaration": 974,
                         "src": "341:14:39",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_NftMarketPlace_$991",
+                          "typeIdentifier": "t_contract$_NftMarketPlace_$974",
                           "typeString": "contract NftMarketPlace"
                         }
                       },
                       "visibility": "internal"
                     }
                   ],
-                  "id": 421,
+                  "id": 404,
                   "initialValue": {
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 419,
+                      "id": 402,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -454,28 +454,28 @@
                       "nodeType": "NewExpression",
                       "src": "373:18:39",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_NftMarketPlace_$991_$",
+                        "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_NftMarketPlace_$974_$",
                         "typeString": "function () returns (contract NftMarketPlace)"
                       },
                       "typeName": {
-                        "id": 418,
+                        "id": 401,
                         "nodeType": "UserDefinedTypeName",
                         "pathNode": {
-                          "id": 417,
+                          "id": 400,
                           "name": "NftMarketPlace",
                           "nodeType": "IdentifierPath",
-                          "referencedDeclaration": 991,
+                          "referencedDeclaration": 974,
                           "src": "377:14:39"
                         },
-                        "referencedDeclaration": 991,
+                        "referencedDeclaration": 974,
                         "src": "377:14:39",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_NftMarketPlace_$991",
+                          "typeIdentifier": "t_contract$_NftMarketPlace_$974",
                           "typeString": "contract NftMarketPlace"
                         }
                       }
                     },
-                    "id": 420,
+                    "id": 403,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -486,7 +486,7 @@
                     "src": "373:20:39",
                     "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_NftMarketPlace_$991",
+                      "typeIdentifier": "t_contract$_NftMarketPlace_$974",
                       "typeString": "contract NftMarketPlace"
                     }
                   },
@@ -497,11 +497,11 @@
                   "expression": {
                     "arguments": [
                       {
-                        "id": 423,
+                        "id": 406,
                         "name": "_ownerDao",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 402,
+                        "referencedDeclaration": 385,
                         "src": "420:9:39",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -509,14 +509,14 @@
                         }
                       },
                       {
-                        "id": 424,
+                        "id": 407,
                         "name": "newMarketPlace",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 416,
+                        "referencedDeclaration": 399,
                         "src": "431:14:39",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_NftMarketPlace_$991",
+                          "typeIdentifier": "t_contract$_NftMarketPlace_$974",
                           "typeString": "contract NftMarketPlace"
                         }
                       }
@@ -528,22 +528,22 @@
                           "typeString": "address"
                         },
                         {
-                          "typeIdentifier": "t_contract$_NftMarketPlace_$991",
+                          "typeIdentifier": "t_contract$_NftMarketPlace_$974",
                           "typeString": "contract NftMarketPlace"
                         }
                       ],
-                      "id": 422,
+                      "id": 405,
                       "name": "giveControlToDao",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 449,
+                      "referencedDeclaration": 432,
                       "src": "403:16:39",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_contract$_NftMarketPlace_$991_$returns$__$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_contract$_NftMarketPlace_$974_$returns$__$",
                         "typeString": "function (address,contract NftMarketPlace)"
                       }
                     },
-                    "id": 425,
+                    "id": 408,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -558,7 +558,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 426,
+                  "id": 409,
                   "nodeType": "ExpressionStatement",
                   "src": "403:43:39"
                 },
@@ -566,14 +566,14 @@
                   "expression": {
                     "arguments": [
                       {
-                        "id": 430,
+                        "id": 413,
                         "name": "newMarketPlace",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 416,
+                        "referencedDeclaration": 399,
                         "src": "474:14:39",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_NftMarketPlace_$991",
+                          "typeIdentifier": "t_contract$_NftMarketPlace_$974",
                           "typeString": "contract NftMarketPlace"
                         }
                       }
@@ -581,23 +581,23 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_contract$_NftMarketPlace_$991",
+                          "typeIdentifier": "t_contract$_NftMarketPlace_$974",
                           "typeString": "contract NftMarketPlace"
                         }
                       ],
                       "expression": {
-                        "id": 427,
+                        "id": 410,
                         "name": "marketplaces",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 400,
+                        "referencedDeclaration": 383,
                         "src": "456:12:39",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_contract$_NftMarketPlace_$991_$dyn_storage",
+                          "typeIdentifier": "t_array$_t_contract$_NftMarketPlace_$974_$dyn_storage",
                           "typeString": "contract NftMarketPlace[] storage ref"
                         }
                       },
-                      "id": 429,
+                      "id": 412,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -606,11 +606,11 @@
                       "nodeType": "MemberAccess",
                       "src": "456:17:39",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_contract$_NftMarketPlace_$991_$dyn_storage_ptr_$_t_contract$_NftMarketPlace_$991_$returns$__$bound_to$_t_array$_t_contract$_NftMarketPlace_$991_$dyn_storage_ptr_$",
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_contract$_NftMarketPlace_$974_$dyn_storage_ptr_$_t_contract$_NftMarketPlace_$974_$returns$__$bound_to$_t_array$_t_contract$_NftMarketPlace_$974_$dyn_storage_ptr_$",
                         "typeString": "function (contract NftMarketPlace[] storage pointer,contract NftMarketPlace)"
                       }
                     },
-                    "id": 431,
+                    "id": 414,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -625,14 +625,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 432,
+                  "id": 415,
                   "nodeType": "ExpressionStatement",
                   "src": "456:33:39"
                 }
               ]
             },
             "functionSelector": "8e3dfcdd",
-            "id": 434,
+            "id": 417,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -640,17 +640,17 @@
             "nameLocation": "242:20:39",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 403,
+              "id": 386,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 402,
+                  "id": 385,
                   "mutability": "mutable",
                   "name": "_ownerDao",
                   "nameLocation": "271:9:39",
                   "nodeType": "VariableDeclaration",
-                  "scope": 434,
+                  "scope": 417,
                   "src": "263:17:39",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -659,7 +659,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 401,
+                    "id": 384,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "263:7:39",
@@ -675,12 +675,12 @@
               "src": "262:19:39"
             },
             "returnParameters": {
-              "id": 404,
+              "id": 387,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "289:0:39"
             },
-            "scope": 450,
+            "scope": 433,
             "src": "233:263:39",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -688,7 +688,7 @@
           },
           {
             "body": {
-              "id": 448,
+              "id": 431,
               "nodeType": "Block",
               "src": "575:48:39",
               "statements": [
@@ -696,11 +696,11 @@
                   "expression": {
                     "arguments": [
                       {
-                        "id": 445,
+                        "id": 428,
                         "name": "_dao",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 436,
+                        "referencedDeclaration": 419,
                         "src": "611:4:39",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -716,32 +716,32 @@
                         }
                       ],
                       "expression": {
-                        "id": 442,
+                        "id": 425,
                         "name": "_market",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 439,
+                        "referencedDeclaration": 422,
                         "src": "585:7:39",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_NftMarketPlace_$991",
+                          "typeIdentifier": "t_contract$_NftMarketPlace_$974",
                           "typeString": "contract NftMarketPlace"
                         }
                       },
-                      "id": 444,
+                      "id": 427,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "transferOwnership",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1404,
+                      "referencedDeclaration": 1790,
                       "src": "585:25:39",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address) external"
                       }
                     },
-                    "id": 446,
+                    "id": 429,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -756,13 +756,13 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 447,
+                  "id": 430,
                   "nodeType": "ExpressionStatement",
                   "src": "585:31:39"
                 }
               ]
             },
-            "id": 449,
+            "id": 432,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -770,17 +770,17 @@
             "nameLocation": "511:16:39",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 440,
+              "id": 423,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 436,
+                  "id": 419,
                   "mutability": "mutable",
                   "name": "_dao",
                   "nameLocation": "536:4:39",
                   "nodeType": "VariableDeclaration",
-                  "scope": 449,
+                  "scope": 432,
                   "src": "528:12:39",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -789,7 +789,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 435,
+                    "id": 418,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "528:7:39",
@@ -803,33 +803,33 @@
                 },
                 {
                   "constant": false,
-                  "id": 439,
+                  "id": 422,
                   "mutability": "mutable",
                   "name": "_market",
                   "nameLocation": "557:7:39",
                   "nodeType": "VariableDeclaration",
-                  "scope": 449,
+                  "scope": 432,
                   "src": "542:22:39",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_NftMarketPlace_$991",
+                    "typeIdentifier": "t_contract$_NftMarketPlace_$974",
                     "typeString": "contract NftMarketPlace"
                   },
                   "typeName": {
-                    "id": 438,
+                    "id": 421,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 437,
+                      "id": 420,
                       "name": "NftMarketPlace",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 991,
+                      "referencedDeclaration": 974,
                       "src": "542:14:39"
                     },
-                    "referencedDeclaration": 991,
+                    "referencedDeclaration": 974,
                     "src": "542:14:39",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_NftMarketPlace_$991",
+                      "typeIdentifier": "t_contract$_NftMarketPlace_$974",
                       "typeString": "contract NftMarketPlace"
                     }
                   },
@@ -839,19 +839,19 @@
               "src": "527:38:39"
             },
             "returnParameters": {
-              "id": 441,
+              "id": 424,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "575:0:39"
             },
-            "scope": 450,
+            "scope": 433,
             "src": "502:121:39",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "internal"
           }
         ],
-        "scope": 451,
+        "scope": 434,
         "src": "142:483:39",
         "usedErrors": []
       }

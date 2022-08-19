@@ -976,57 +976,57 @@
     "absolutePath": "/home/crome/.brownie/packages/OpenZeppelin/openzeppelin-contracts@4.7.2/contracts/governance/extensions/GovernorSettings.sol",
     "exportedSymbols": {
       "Address": [
-        7376
+        7426
       ],
       "Context": [
-        5392
+        5442
       ],
       "DoubleEndedQueue": [
-        10367
+        10417
       ],
       "ECDSA": [
-        7997
+        8047
       ],
       "EIP712": [
-        8151
+        8201
       ],
       "ERC165": [
-        8175
+        8225
       ],
       "Governor": [
-        3439
+        3825
       ],
       "GovernorSettings": [
-        3843
+        4229
       ],
       "IERC1155Receiver": [
-        7063
+        7113
       ],
       "IERC165": [
-        6725
+        6775
       ],
       "IERC721Receiver": [
-        7081
+        7131
       ],
       "IGovernor": [
-        7022
+        7072
       ],
       "SafeCast": [
-        10026
+        10076
       ],
       "Strings": [
-        11293
+        11302
       ],
       "Timers": [
-        7590
+        7640
       ]
     },
-    "id": 3844,
+    "id": 4230,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3667,
+        "id": 4053,
         "literals": [
           "solidity",
           "^",
@@ -1039,11 +1039,11 @@
       {
         "absolutePath": "/home/crome/.brownie/packages/OpenZeppelin/openzeppelin-contracts@4.7.2/contracts/governance/Governor.sol",
         "file": "../Governor.sol",
-        "id": 3668,
+        "id": 4054,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 3844,
-        "sourceUnit": 3440,
+        "scope": 4230,
+        "sourceUnit": 3826,
         "src": "136:25:7",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1053,13 +1053,13 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 3670,
+              "id": 4056,
               "name": "Governor",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 3439,
+              "referencedDeclaration": 3825,
               "src": "314:8:7"
             },
-            "id": 3671,
+            "id": 4057,
             "nodeType": "InheritanceSpecifier",
             "src": "314:8:7"
           }
@@ -1068,23 +1068,23 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "documentation": {
-          "id": 3669,
+          "id": 4055,
           "nodeType": "StructuredDocumentation",
           "src": "163:112:7",
           "text": " @dev Extension of {Governor} for settings updatable through governance.\n _Available since v4.4._"
         },
         "fullyImplemented": false,
-        "id": 3843,
+        "id": 4229,
         "linearizedBaseContracts": [
-          3843,
-          3439,
-          7063,
-          7081,
-          7022,
-          8151,
-          8175,
-          6725,
-          5392
+          4229,
+          3825,
+          7113,
+          7131,
+          7072,
+          8201,
+          8225,
+          6775,
+          5442
         ],
         "name": "GovernorSettings",
         "nameLocation": "294:16:7",
@@ -1092,12 +1092,12 @@
         "nodes": [
           {
             "constant": false,
-            "id": 3673,
+            "id": 4059,
             "mutability": "mutable",
             "name": "_votingDelay",
             "nameLocation": "345:12:7",
             "nodeType": "VariableDeclaration",
-            "scope": 3843,
+            "scope": 4229,
             "src": "329:28:7",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1106,7 +1106,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 3672,
+              "id": 4058,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "329:7:7",
@@ -1119,12 +1119,12 @@
           },
           {
             "constant": false,
-            "id": 3675,
+            "id": 4061,
             "mutability": "mutable",
             "name": "_votingPeriod",
             "nameLocation": "379:13:7",
             "nodeType": "VariableDeclaration",
-            "scope": 3843,
+            "scope": 4229,
             "src": "363:29:7",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1133,7 +1133,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 3674,
+              "id": 4060,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "363:7:7",
@@ -1146,12 +1146,12 @@
           },
           {
             "constant": false,
-            "id": 3677,
+            "id": 4063,
             "mutability": "mutable",
             "name": "_proposalThreshold",
             "nameLocation": "414:18:7",
             "nodeType": "VariableDeclaration",
-            "scope": 3843,
+            "scope": 4229,
             "src": "398:34:7",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1160,7 +1160,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 3676,
+              "id": 4062,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "398:7:7",
@@ -1174,23 +1174,23 @@
           {
             "anonymous": false,
             "eventSelector": "c565b045403dc03c2eea82b81a0465edad9e2e7fc4d97e11421c209da93d7a93",
-            "id": 3683,
+            "id": 4069,
             "name": "VotingDelaySet",
             "nameLocation": "445:14:7",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 3682,
+              "id": 4068,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3679,
+                  "id": 4065,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "oldVotingDelay",
                   "nameLocation": "468:14:7",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3683,
+                  "scope": 4069,
                   "src": "460:22:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1199,7 +1199,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3678,
+                    "id": 4064,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "460:7:7",
@@ -1212,13 +1212,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 3681,
+                  "id": 4067,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "newVotingDelay",
                   "nameLocation": "492:14:7",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3683,
+                  "scope": 4069,
                   "src": "484:22:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1227,7 +1227,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3680,
+                    "id": 4066,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "484:7:7",
@@ -1246,23 +1246,23 @@
           {
             "anonymous": false,
             "eventSelector": "7e3f7f0708a84de9203036abaa450dccc85ad5ff52f78c170f3edb55cf5e8828",
-            "id": 3689,
+            "id": 4075,
             "name": "VotingPeriodSet",
             "nameLocation": "519:15:7",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 3688,
+              "id": 4074,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3685,
+                  "id": 4071,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "oldVotingPeriod",
                   "nameLocation": "543:15:7",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3689,
+                  "scope": 4075,
                   "src": "535:23:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1271,7 +1271,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3684,
+                    "id": 4070,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "535:7:7",
@@ -1284,13 +1284,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 3687,
+                  "id": 4073,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "newVotingPeriod",
                   "nameLocation": "568:15:7",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3689,
+                  "scope": 4075,
                   "src": "560:23:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1299,7 +1299,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3686,
+                    "id": 4072,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "560:7:7",
@@ -1318,23 +1318,23 @@
           {
             "anonymous": false,
             "eventSelector": "ccb45da8d5717e6c4544694297c4ba5cf151d455c9bb0ed4fc7a38411bc05461",
-            "id": 3695,
+            "id": 4081,
             "name": "ProposalThresholdSet",
             "nameLocation": "596:20:7",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 3694,
+              "id": 4080,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3691,
+                  "id": 4077,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "oldProposalThreshold",
                   "nameLocation": "625:20:7",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3695,
+                  "scope": 4081,
                   "src": "617:28:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1343,7 +1343,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3690,
+                    "id": 4076,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "617:7:7",
@@ -1356,13 +1356,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 3693,
+                  "id": 4079,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "newProposalThreshold",
                   "nameLocation": "655:20:7",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3695,
+                  "scope": 4081,
                   "src": "647:28:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1371,7 +1371,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3692,
+                    "id": 4078,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "647:7:7",
@@ -1389,7 +1389,7 @@
           },
           {
             "body": {
-              "id": 3717,
+              "id": 4103,
               "nodeType": "Block",
               "src": "882:156:7",
               "statements": [
@@ -1397,11 +1397,11 @@
                   "expression": {
                     "arguments": [
                       {
-                        "id": 3706,
+                        "id": 4092,
                         "name": "initialVotingDelay",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3698,
+                        "referencedDeclaration": 4084,
                         "src": "908:18:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1416,18 +1416,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 3705,
+                      "id": 4091,
                       "name": "_setVotingDelay",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3803,
+                      "referencedDeclaration": 4189,
                       "src": "892:15:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$returns$__$",
                         "typeString": "function (uint256)"
                       }
                     },
-                    "id": 3707,
+                    "id": 4093,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1442,7 +1442,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 3708,
+                  "id": 4094,
                   "nodeType": "ExpressionStatement",
                   "src": "892:35:7"
                 },
@@ -1450,11 +1450,11 @@
                   "expression": {
                     "arguments": [
                       {
-                        "id": 3710,
+                        "id": 4096,
                         "name": "initialVotingPeriod",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3700,
+                        "referencedDeclaration": 4086,
                         "src": "954:19:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1469,18 +1469,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 3709,
+                      "id": 4095,
                       "name": "_setVotingPeriod",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3826,
+                      "referencedDeclaration": 4212,
                       "src": "937:16:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$returns$__$",
                         "typeString": "function (uint256)"
                       }
                     },
-                    "id": 3711,
+                    "id": 4097,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1495,7 +1495,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 3712,
+                  "id": 4098,
                   "nodeType": "ExpressionStatement",
                   "src": "937:37:7"
                 },
@@ -1503,11 +1503,11 @@
                   "expression": {
                     "arguments": [
                       {
-                        "id": 3714,
+                        "id": 4100,
                         "name": "initialProposalThreshold",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3702,
+                        "referencedDeclaration": 4088,
                         "src": "1006:24:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1522,18 +1522,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 3713,
+                      "id": 4099,
                       "name": "_setProposalThreshold",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3842,
+                      "referencedDeclaration": 4228,
                       "src": "984:21:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$returns$__$",
                         "typeString": "function (uint256)"
                       }
                     },
-                    "id": 3715,
+                    "id": 4101,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1548,19 +1548,19 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 3716,
+                  "id": 4102,
                   "nodeType": "ExpressionStatement",
                   "src": "984:47:7"
                 }
               ]
             },
             "documentation": {
-              "id": 3696,
+              "id": 4082,
               "nodeType": "StructuredDocumentation",
               "src": "683:61:7",
               "text": " @dev Initialize the governance parameters."
             },
-            "id": 3718,
+            "id": 4104,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
@@ -1568,17 +1568,17 @@
             "nameLocation": "-1:-1:-1",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3703,
+              "id": 4089,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3698,
+                  "id": 4084,
                   "mutability": "mutable",
                   "name": "initialVotingDelay",
                   "nameLocation": "778:18:7",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3718,
+                  "scope": 4104,
                   "src": "770:26:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1587,7 +1587,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3697,
+                    "id": 4083,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "770:7:7",
@@ -1600,12 +1600,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 3700,
+                  "id": 4086,
                   "mutability": "mutable",
                   "name": "initialVotingPeriod",
                   "nameLocation": "814:19:7",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3718,
+                  "scope": 4104,
                   "src": "806:27:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1614,7 +1614,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3699,
+                    "id": 4085,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "806:7:7",
@@ -1627,12 +1627,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 3702,
+                  "id": 4088,
                   "mutability": "mutable",
                   "name": "initialProposalThreshold",
                   "nameLocation": "851:24:7",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3718,
+                  "scope": 4104,
                   "src": "843:32:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1641,7 +1641,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3701,
+                    "id": 4087,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "843:7:7",
@@ -1656,12 +1656,12 @@
               "src": "760:121:7"
             },
             "returnParameters": {
-              "id": 3704,
+              "id": 4090,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "882:0:7"
             },
-            "scope": 3843,
+            "scope": 4229,
             "src": "749:289:7",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -1669,41 +1669,41 @@
           },
           {
             "baseFunctions": [
-              6869
+              6919
             ],
             "body": {
-              "id": 3727,
+              "id": 4113,
               "nodeType": "Block",
               "src": "1171:36:7",
               "statements": [
                 {
                   "expression": {
-                    "id": 3725,
+                    "id": 4111,
                     "name": "_votingDelay",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 3673,
+                    "referencedDeclaration": 4059,
                     "src": "1188:12:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 3724,
-                  "id": 3726,
+                  "functionReturnParameters": 4110,
+                  "id": 4112,
                   "nodeType": "Return",
                   "src": "1181:19:7"
                 }
               ]
             },
             "documentation": {
-              "id": 3719,
+              "id": 4105,
               "nodeType": "StructuredDocumentation",
               "src": "1044:52:7",
               "text": " @dev See {IGovernor-votingDelay}."
             },
             "functionSelector": "3932abb1",
-            "id": 3728,
+            "id": 4114,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -1711,29 +1711,29 @@
             "nameLocation": "1110:11:7",
             "nodeType": "FunctionDefinition",
             "overrides": {
-              "id": 3721,
+              "id": 4107,
               "nodeType": "OverrideSpecifier",
               "overrides": [],
               "src": "1144:8:7"
             },
             "parameters": {
-              "id": 3720,
+              "id": 4106,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1121:2:7"
             },
             "returnParameters": {
-              "id": 3724,
+              "id": 4110,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3723,
+                  "id": 4109,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3728,
+                  "scope": 4114,
                   "src": "1162:7:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1742,7 +1742,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3722,
+                    "id": 4108,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1162:7:7",
@@ -1756,7 +1756,7 @@
               ],
               "src": "1161:9:7"
             },
-            "scope": 3843,
+            "scope": 4229,
             "src": "1101:106:7",
             "stateMutability": "view",
             "virtual": true,
@@ -1764,41 +1764,41 @@
           },
           {
             "baseFunctions": [
-              6875
+              6925
             ],
             "body": {
-              "id": 3737,
+              "id": 4123,
               "nodeType": "Block",
               "src": "1342:37:7",
               "statements": [
                 {
                   "expression": {
-                    "id": 3735,
+                    "id": 4121,
                     "name": "_votingPeriod",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 3675,
+                    "referencedDeclaration": 4061,
                     "src": "1359:13:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 3734,
-                  "id": 3736,
+                  "functionReturnParameters": 4120,
+                  "id": 4122,
                   "nodeType": "Return",
                   "src": "1352:20:7"
                 }
               ]
             },
             "documentation": {
-              "id": 3729,
+              "id": 4115,
               "nodeType": "StructuredDocumentation",
               "src": "1213:53:7",
               "text": " @dev See {IGovernor-votingPeriod}."
             },
             "functionSelector": "02a251a3",
-            "id": 3738,
+            "id": 4124,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -1806,29 +1806,29 @@
             "nameLocation": "1280:12:7",
             "nodeType": "FunctionDefinition",
             "overrides": {
-              "id": 3731,
+              "id": 4117,
               "nodeType": "OverrideSpecifier",
               "overrides": [],
               "src": "1315:8:7"
             },
             "parameters": {
-              "id": 3730,
+              "id": 4116,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1292:2:7"
             },
             "returnParameters": {
-              "id": 3734,
+              "id": 4120,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3733,
+                  "id": 4119,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3738,
+                  "scope": 4124,
                   "src": "1333:7:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1837,7 +1837,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3732,
+                    "id": 4118,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1333:7:7",
@@ -1851,7 +1851,7 @@
               ],
               "src": "1332:9:7"
             },
-            "scope": 3843,
+            "scope": 4229,
             "src": "1271:108:7",
             "stateMutability": "view",
             "virtual": true,
@@ -1859,41 +1859,41 @@
           },
           {
             "baseFunctions": [
-              2511
+              2897
             ],
             "body": {
-              "id": 3747,
+              "id": 4133,
               "nodeType": "Block",
               "src": "1523:42:7",
               "statements": [
                 {
                   "expression": {
-                    "id": 3745,
+                    "id": 4131,
                     "name": "_proposalThreshold",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 3677,
+                    "referencedDeclaration": 4063,
                     "src": "1540:18:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 3744,
-                  "id": 3746,
+                  "functionReturnParameters": 4130,
+                  "id": 4132,
                   "nodeType": "Return",
                   "src": "1533:25:7"
                 }
               ]
             },
             "documentation": {
-              "id": 3739,
+              "id": 4125,
               "nodeType": "StructuredDocumentation",
               "src": "1385:57:7",
               "text": " @dev See {Governor-proposalThreshold}."
             },
             "functionSelector": "b58131b0",
-            "id": 3748,
+            "id": 4134,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -1901,29 +1901,29 @@
             "nameLocation": "1456:17:7",
             "nodeType": "FunctionDefinition",
             "overrides": {
-              "id": 3741,
+              "id": 4127,
               "nodeType": "OverrideSpecifier",
               "overrides": [],
               "src": "1496:8:7"
             },
             "parameters": {
-              "id": 3740,
+              "id": 4126,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1473:2:7"
             },
             "returnParameters": {
-              "id": 3744,
+              "id": 4130,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3743,
+                  "id": 4129,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3748,
+                  "scope": 4134,
                   "src": "1514:7:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1932,7 +1932,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3742,
+                    "id": 4128,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1514:7:7",
@@ -1946,7 +1946,7 @@
               ],
               "src": "1513:9:7"
             },
-            "scope": 3843,
+            "scope": 4229,
             "src": "1447:118:7",
             "stateMutability": "view",
             "virtual": true,
@@ -1954,7 +1954,7 @@
           },
           {
             "body": {
-              "id": 3760,
+              "id": 4146,
               "nodeType": "Block",
               "src": "1816:48:7",
               "statements": [
@@ -1962,11 +1962,11 @@
                   "expression": {
                     "arguments": [
                       {
-                        "id": 3757,
+                        "id": 4143,
                         "name": "newVotingDelay",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3751,
+                        "referencedDeclaration": 4137,
                         "src": "1842:14:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1981,18 +1981,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 3756,
+                      "id": 4142,
                       "name": "_setVotingDelay",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3803,
+                      "referencedDeclaration": 4189,
                       "src": "1826:15:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$returns$__$",
                         "typeString": "function (uint256)"
                       }
                     },
-                    "id": 3758,
+                    "id": 4144,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2007,31 +2007,31 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 3759,
+                  "id": 4145,
                   "nodeType": "ExpressionStatement",
                   "src": "1826:31:7"
                 }
               ]
             },
             "documentation": {
-              "id": 3749,
+              "id": 4135,
               "nodeType": "StructuredDocumentation",
               "src": "1571:162:7",
               "text": " @dev Update the voting delay. This operation can only be performed through a governance proposal.\n Emits a {VotingDelaySet} event."
             },
             "functionSelector": "70b0f660",
-            "id": 3761,
+            "id": 4147,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
-                "id": 3754,
+                "id": 4140,
                 "kind": "modifierInvocation",
                 "modifierName": {
-                  "id": 3753,
+                  "id": 4139,
                   "name": "onlyGovernance",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 2247,
+                  "referencedDeclaration": 2633,
                   "src": "1801:14:7"
                 },
                 "nodeType": "ModifierInvocation",
@@ -2042,17 +2042,17 @@
             "nameLocation": "1747:14:7",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3752,
+              "id": 4138,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3751,
+                  "id": 4137,
                   "mutability": "mutable",
                   "name": "newVotingDelay",
                   "nameLocation": "1770:14:7",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3761,
+                  "scope": 4147,
                   "src": "1762:22:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2061,7 +2061,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3750,
+                    "id": 4136,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1762:7:7",
@@ -2076,12 +2076,12 @@
               "src": "1761:24:7"
             },
             "returnParameters": {
-              "id": 3755,
+              "id": 4141,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1816:0:7"
             },
-            "scope": 3843,
+            "scope": 4229,
             "src": "1738:126:7",
             "stateMutability": "nonpayable",
             "virtual": true,
@@ -2089,7 +2089,7 @@
           },
           {
             "body": {
-              "id": 3773,
+              "id": 4159,
               "nodeType": "Block",
               "src": "2119:50:7",
               "statements": [
@@ -2097,11 +2097,11 @@
                   "expression": {
                     "arguments": [
                       {
-                        "id": 3770,
+                        "id": 4156,
                         "name": "newVotingPeriod",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3764,
+                        "referencedDeclaration": 4150,
                         "src": "2146:15:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -2116,18 +2116,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 3769,
+                      "id": 4155,
                       "name": "_setVotingPeriod",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3826,
+                      "referencedDeclaration": 4212,
                       "src": "2129:16:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$returns$__$",
                         "typeString": "function (uint256)"
                       }
                     },
-                    "id": 3771,
+                    "id": 4157,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2142,31 +2142,31 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 3772,
+                  "id": 4158,
                   "nodeType": "ExpressionStatement",
                   "src": "2129:33:7"
                 }
               ]
             },
             "documentation": {
-              "id": 3762,
+              "id": 4148,
               "nodeType": "StructuredDocumentation",
               "src": "1870:164:7",
               "text": " @dev Update the voting period. This operation can only be performed through a governance proposal.\n Emits a {VotingPeriodSet} event."
             },
             "functionSelector": "ea0217cf",
-            "id": 3774,
+            "id": 4160,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
-                "id": 3767,
+                "id": 4153,
                 "kind": "modifierInvocation",
                 "modifierName": {
-                  "id": 3766,
+                  "id": 4152,
                   "name": "onlyGovernance",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 2247,
+                  "referencedDeclaration": 2633,
                   "src": "2104:14:7"
                 },
                 "nodeType": "ModifierInvocation",
@@ -2177,17 +2177,17 @@
             "nameLocation": "2048:15:7",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3765,
+              "id": 4151,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3764,
+                  "id": 4150,
                   "mutability": "mutable",
                   "name": "newVotingPeriod",
                   "nameLocation": "2072:15:7",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3774,
+                  "scope": 4160,
                   "src": "2064:23:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2196,7 +2196,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3763,
+                    "id": 4149,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2064:7:7",
@@ -2211,12 +2211,12 @@
               "src": "2063:25:7"
             },
             "returnParameters": {
-              "id": 3768,
+              "id": 4154,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2119:0:7"
             },
-            "scope": 3843,
+            "scope": 4229,
             "src": "2039:130:7",
             "stateMutability": "nonpayable",
             "virtual": true,
@@ -2224,7 +2224,7 @@
           },
           {
             "body": {
-              "id": 3786,
+              "id": 4172,
               "nodeType": "Block",
               "src": "2444:60:7",
               "statements": [
@@ -2232,11 +2232,11 @@
                   "expression": {
                     "arguments": [
                       {
-                        "id": 3783,
+                        "id": 4169,
                         "name": "newProposalThreshold",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3777,
+                        "referencedDeclaration": 4163,
                         "src": "2476:20:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -2251,18 +2251,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 3782,
+                      "id": 4168,
                       "name": "_setProposalThreshold",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3842,
+                      "referencedDeclaration": 4228,
                       "src": "2454:21:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$returns$__$",
                         "typeString": "function (uint256)"
                       }
                     },
-                    "id": 3784,
+                    "id": 4170,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2277,31 +2277,31 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 3785,
+                  "id": 4171,
                   "nodeType": "ExpressionStatement",
                   "src": "2454:43:7"
                 }
               ]
             },
             "documentation": {
-              "id": 3775,
+              "id": 4161,
               "nodeType": "StructuredDocumentation",
               "src": "2175:174:7",
               "text": " @dev Update the proposal threshold. This operation can only be performed through a governance proposal.\n Emits a {ProposalThresholdSet} event."
             },
             "functionSelector": "ece40cc1",
-            "id": 3787,
+            "id": 4173,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
-                "id": 3780,
+                "id": 4166,
                 "kind": "modifierInvocation",
                 "modifierName": {
-                  "id": 3779,
+                  "id": 4165,
                   "name": "onlyGovernance",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 2247,
+                  "referencedDeclaration": 2633,
                   "src": "2429:14:7"
                 },
                 "nodeType": "ModifierInvocation",
@@ -2312,17 +2312,17 @@
             "nameLocation": "2363:20:7",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3778,
+              "id": 4164,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3777,
+                  "id": 4163,
                   "mutability": "mutable",
                   "name": "newProposalThreshold",
                   "nameLocation": "2392:20:7",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3787,
+                  "scope": 4173,
                   "src": "2384:28:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2331,7 +2331,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3776,
+                    "id": 4162,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2384:7:7",
@@ -2346,12 +2346,12 @@
               "src": "2383:30:7"
             },
             "returnParameters": {
-              "id": 3781,
+              "id": 4167,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2444:0:7"
             },
-            "scope": 3843,
+            "scope": 4229,
             "src": "2354:150:7",
             "stateMutability": "nonpayable",
             "virtual": true,
@@ -2359,7 +2359,7 @@
           },
           {
             "body": {
-              "id": 3802,
+              "id": 4188,
               "nodeType": "Block",
               "src": "2688:105:7",
               "statements": [
@@ -2367,11 +2367,11 @@
                   "eventCall": {
                     "arguments": [
                       {
-                        "id": 3794,
+                        "id": 4180,
                         "name": "_votingDelay",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3673,
+                        "referencedDeclaration": 4059,
                         "src": "2718:12:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -2379,11 +2379,11 @@
                         }
                       },
                       {
-                        "id": 3795,
+                        "id": 4181,
                         "name": "newVotingDelay",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3790,
+                        "referencedDeclaration": 4176,
                         "src": "2732:14:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -2402,18 +2402,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 3793,
+                      "id": 4179,
                       "name": "VotingDelaySet",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3683,
+                      "referencedDeclaration": 4069,
                       "src": "2703:14:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_uint256_$returns$__$",
                         "typeString": "function (uint256,uint256)"
                       }
                     },
-                    "id": 3796,
+                    "id": 4182,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2428,23 +2428,23 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 3797,
+                  "id": 4183,
                   "nodeType": "EmitStatement",
                   "src": "2698:49:7"
                 },
                 {
                   "expression": {
-                    "id": 3800,
+                    "id": 4186,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 3798,
+                      "id": 4184,
                       "name": "_votingDelay",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3673,
+                      "referencedDeclaration": 4059,
                       "src": "2757:12:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2454,11 +2454,11 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 3799,
+                      "id": 4185,
                       "name": "newVotingDelay",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3790,
+                      "referencedDeclaration": 4176,
                       "src": "2772:14:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2471,19 +2471,19 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 3801,
+                  "id": 4187,
                   "nodeType": "ExpressionStatement",
                   "src": "2757:29:7"
                 }
               ]
             },
             "documentation": {
-              "id": 3788,
+              "id": 4174,
               "nodeType": "StructuredDocumentation",
               "src": "2510:107:7",
               "text": " @dev Internal setter for the voting delay.\n Emits a {VotingDelaySet} event."
             },
-            "id": 3803,
+            "id": 4189,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -2491,17 +2491,17 @@
             "nameLocation": "2631:15:7",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3791,
+              "id": 4177,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3790,
+                  "id": 4176,
                   "mutability": "mutable",
                   "name": "newVotingDelay",
                   "nameLocation": "2655:14:7",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3803,
+                  "scope": 4189,
                   "src": "2647:22:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2510,7 +2510,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3789,
+                    "id": 4175,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2647:7:7",
@@ -2525,12 +2525,12 @@
               "src": "2646:24:7"
             },
             "returnParameters": {
-              "id": 3792,
+              "id": 4178,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2688:0:7"
             },
-            "scope": 3843,
+            "scope": 4229,
             "src": "2622:171:7",
             "stateMutability": "nonpayable",
             "virtual": true,
@@ -2538,7 +2538,7 @@
           },
           {
             "body": {
-              "id": 3825,
+              "id": 4211,
               "nodeType": "Block",
               "src": "2981:248:7",
               "statements": [
@@ -2550,17 +2550,17 @@
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         },
-                        "id": 3812,
+                        "id": 4198,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
-                          "id": 3810,
+                          "id": 4196,
                           "name": "newVotingPeriod",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3806,
+                          "referencedDeclaration": 4192,
                           "src": "3056:15:7",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -2571,7 +2571,7 @@
                         "operator": ">",
                         "rightExpression": {
                           "hexValue": "30",
-                          "id": 3811,
+                          "id": 4197,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -2593,7 +2593,7 @@
                       },
                       {
                         "hexValue": "476f7665726e6f7253657474696e67733a20766f74696e6720706572696f6420746f6f206c6f77",
-                        "id": 3813,
+                        "id": 4199,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2619,7 +2619,7 @@
                           "typeString": "literal_string \"GovernorSettings: voting period too low\""
                         }
                       ],
-                      "id": 3809,
+                      "id": 4195,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -2633,7 +2633,7 @@
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 3814,
+                    "id": 4200,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2648,7 +2648,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 3815,
+                  "id": 4201,
                   "nodeType": "ExpressionStatement",
                   "src": "3048:71:7"
                 },
@@ -2656,11 +2656,11 @@
                   "eventCall": {
                     "arguments": [
                       {
-                        "id": 3817,
+                        "id": 4203,
                         "name": "_votingPeriod",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3675,
+                        "referencedDeclaration": 4061,
                         "src": "3150:13:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -2668,11 +2668,11 @@
                         }
                       },
                       {
-                        "id": 3818,
+                        "id": 4204,
                         "name": "newVotingPeriod",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3806,
+                        "referencedDeclaration": 4192,
                         "src": "3165:15:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -2691,18 +2691,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 3816,
+                      "id": 4202,
                       "name": "VotingPeriodSet",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3689,
+                      "referencedDeclaration": 4075,
                       "src": "3134:15:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_uint256_$returns$__$",
                         "typeString": "function (uint256,uint256)"
                       }
                     },
-                    "id": 3819,
+                    "id": 4205,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2717,23 +2717,23 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 3820,
+                  "id": 4206,
                   "nodeType": "EmitStatement",
                   "src": "3129:52:7"
                 },
                 {
                   "expression": {
-                    "id": 3823,
+                    "id": 4209,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 3821,
+                      "id": 4207,
                       "name": "_votingPeriod",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3675,
+                      "referencedDeclaration": 4061,
                       "src": "3191:13:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2743,11 +2743,11 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 3822,
+                      "id": 4208,
                       "name": "newVotingPeriod",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3806,
+                      "referencedDeclaration": 4192,
                       "src": "3207:15:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2760,19 +2760,19 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 3824,
+                  "id": 4210,
                   "nodeType": "ExpressionStatement",
                   "src": "3191:31:7"
                 }
               ]
             },
             "documentation": {
-              "id": 3804,
+              "id": 4190,
               "nodeType": "StructuredDocumentation",
               "src": "2799:109:7",
               "text": " @dev Internal setter for the voting period.\n Emits a {VotingPeriodSet} event."
             },
-            "id": 3826,
+            "id": 4212,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -2780,17 +2780,17 @@
             "nameLocation": "2922:16:7",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3807,
+              "id": 4193,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3806,
+                  "id": 4192,
                   "mutability": "mutable",
                   "name": "newVotingPeriod",
                   "nameLocation": "2947:15:7",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3826,
+                  "scope": 4212,
                   "src": "2939:23:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2799,7 +2799,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3805,
+                    "id": 4191,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2939:7:7",
@@ -2814,12 +2814,12 @@
               "src": "2938:25:7"
             },
             "returnParameters": {
-              "id": 3808,
+              "id": 4194,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2981:0:7"
             },
-            "scope": 3843,
+            "scope": 4229,
             "src": "2913:316:7",
             "stateMutability": "nonpayable",
             "virtual": true,
@@ -2827,7 +2827,7 @@
           },
           {
             "body": {
-              "id": 3841,
+              "id": 4227,
               "nodeType": "Block",
               "src": "3437:135:7",
               "statements": [
@@ -2835,11 +2835,11 @@
                   "eventCall": {
                     "arguments": [
                       {
-                        "id": 3833,
+                        "id": 4219,
                         "name": "_proposalThreshold",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3677,
+                        "referencedDeclaration": 4063,
                         "src": "3473:18:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -2847,11 +2847,11 @@
                         }
                       },
                       {
-                        "id": 3834,
+                        "id": 4220,
                         "name": "newProposalThreshold",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3829,
+                        "referencedDeclaration": 4215,
                         "src": "3493:20:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -2870,18 +2870,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 3832,
+                      "id": 4218,
                       "name": "ProposalThresholdSet",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3695,
+                      "referencedDeclaration": 4081,
                       "src": "3452:20:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_uint256_$returns$__$",
                         "typeString": "function (uint256,uint256)"
                       }
                     },
-                    "id": 3835,
+                    "id": 4221,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2896,23 +2896,23 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 3836,
+                  "id": 4222,
                   "nodeType": "EmitStatement",
                   "src": "3447:67:7"
                 },
                 {
                   "expression": {
-                    "id": 3839,
+                    "id": 4225,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 3837,
+                      "id": 4223,
                       "name": "_proposalThreshold",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3677,
+                      "referencedDeclaration": 4063,
                       "src": "3524:18:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2922,11 +2922,11 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 3838,
+                      "id": 4224,
                       "name": "newProposalThreshold",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3829,
+                      "referencedDeclaration": 4215,
                       "src": "3545:20:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2939,19 +2939,19 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 3840,
+                  "id": 4226,
                   "nodeType": "ExpressionStatement",
                   "src": "3524:41:7"
                 }
               ]
             },
             "documentation": {
-              "id": 3827,
+              "id": 4213,
               "nodeType": "StructuredDocumentation",
               "src": "3235:119:7",
               "text": " @dev Internal setter for the proposal threshold.\n Emits a {ProposalThresholdSet} event."
             },
-            "id": 3842,
+            "id": 4228,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -2959,17 +2959,17 @@
             "nameLocation": "3368:21:7",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3830,
+              "id": 4216,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3829,
+                  "id": 4215,
                   "mutability": "mutable",
                   "name": "newProposalThreshold",
                   "nameLocation": "3398:20:7",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3842,
+                  "scope": 4228,
                   "src": "3390:28:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2978,7 +2978,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3828,
+                    "id": 4214,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "3390:7:7",
@@ -2993,22 +2993,22 @@
               "src": "3389:30:7"
             },
             "returnParameters": {
-              "id": 3831,
+              "id": 4217,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "3437:0:7"
             },
-            "scope": 3843,
+            "scope": 4229,
             "src": "3359:213:7",
             "stateMutability": "nonpayable",
             "virtual": true,
             "visibility": "internal"
           }
         ],
-        "scope": 3844,
+        "scope": 4230,
         "src": "276:3298:7",
         "usedErrors": [
-          10033
+          10083
         ]
       }
     ],
