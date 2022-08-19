@@ -23,12 +23,13 @@ contract TimeLockFactory {
         TimeLock timeLock = new TimeLock(_minDelay, _proposers, _executors);
 
         timeLocks.push(timeLock);
+        giveAdminControl(timeLock);
 
         emit newTimeLockCreated(address(timeLock), _nftContract);
     }
 
-    function giveAdminControl(uint256 _timeLock) public {
-        TimeLock timeLock = timeLocks[_timeLock];
+    function giveAdminControl(TimeLock _timeLock) internal {
+        TimeLock timeLock = _timeLock;
         timeLock.grantRole(TIMELOCK_ADMIN_ROLE, msg.sender);
     }
 

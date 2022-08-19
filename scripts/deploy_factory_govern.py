@@ -21,12 +21,15 @@ def deploy_governance_factory():
     # Deploy Time Lock
     time_lock_factory = TimeLockFactory.deploy({"from": account})
     tx = time_lock_factory.createNewTimeLock(
-        2, ZERO_ADDRESS, ZERO_ADDRESS, {"from": account}
+        2, ZERO_ADDRESS, ZERO_ADDRESS, account.address, {"from": account}
     )
     tx.wait(1)
-    time_lock_factory.giveAdminControl(0, {"from": account})
+    # time_lock_factory.giveAdminControl(0, {"from": account})
     tx2 = donaty_governance_factory.createNewDao(
-        token_factory.address, time_lock_factory.address, {"from": account}
+        token_factory.address,
+        time_lock_factory.address,
+        account.address,
+        {"from": account},
     )
     tx2.wait(1)
     print(f"Dao Deploy to {donaty_governance_factory.getGovernor(0)}")
