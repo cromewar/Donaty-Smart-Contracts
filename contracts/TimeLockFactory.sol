@@ -9,18 +9,22 @@ contract TimeLockFactory {
     bytes32 public constant TIMELOCK_ADMIN_ROLE =
         keccak256("TIMELOCK_ADMIN_ROLE");
 
-    event newTimeLockCreated(address indexed _timeLockAddress);
+    event newTimeLockCreated(
+        address indexed timelockAddress,
+        address nftContract
+    );
 
     function createNewTimeLock(
         uint256 _minDelay,
         address[] memory _proposers,
-        address[] memory _executors
+        address[] memory _executors,
+        address _nftContract
     ) public {
         TimeLock timeLock = new TimeLock(_minDelay, _proposers, _executors);
 
         timeLocks.push(timeLock);
 
-        emit newTimeLockCreated(address(timeLock));
+        emit newTimeLockCreated(address(timeLock), _nftContract);
     }
 
     function giveAdminControl(uint256 _timeLock) public {
