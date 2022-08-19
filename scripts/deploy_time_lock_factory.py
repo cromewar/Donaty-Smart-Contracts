@@ -1,7 +1,7 @@
 from brownie import TimeLockFactory, TimeLock, Contract, DonatyGovernor, DonatyNFT
 from scripts.helpful_scripts import get_account
 
-ZERO_ADDRESS = ["0x0000000000000000000000000000000000000000"]
+ZERO_ADDRESS = []
 time_delay = 2
 
 
@@ -11,12 +11,12 @@ def deploy_time_lock_factory():
     time_lock_factory = TimeLockFactory.deploy({"from": account})
     print(f"TimeLock Factory Deploy to {time_lock_factory.address}")
     # Deploy Governor
-    # token_factory = DonatyNFT.deploy("Donaty", "DON", {"from": account})
+    token_factory = DonatyNFT.deploy("Donaty", "DON", {"from": account})
 
-    # tx = time_lock_factory.createNewTimeLock(
-    #     time_delay, ZERO_ADDRESS, ZERO_ADDRESS, token_factory.address, {"from": account}
-    # )
-    # tx.wait(1)
+    tx = time_lock_factory.createNewTimeLock(
+        time_delay, ZERO_ADDRESS, ZERO_ADDRESS, token_factory.address, {"from": account}
+    )
+    tx.wait(1)
     # print(f"TimeLock Factory Deploy to {time_lock_factory.getTimeLock(0)}")
     # time_lock = Contract.from_abi(
     #     "TimeLock", time_lock_factory.getTimeLock(0), TimeLock.abi
@@ -38,10 +38,10 @@ def deploy_time_lock_factory():
     #     token_factory.address,
     #     {"from": account},
     # )
-    # bytes32[] memory role,
-    #     address account,
-    #     address timelock,
-    #     address nftContract
+    # # bytes32[] memory role,
+    # #     address account,
+    # #     address timelock,
+    # #     address nftContract
     # tx.wait(1)
 
 

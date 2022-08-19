@@ -25,12 +25,21 @@ contract DonatyNFTFactory {
         address contractAddress
     );
 
+    event newNFTMintedAndApproved(
+        address owner,
+        uint256 id,
+        string tokenUri,
+        address nftContract
+    );
+
     // Array for contracts.
 
     DonatyNFT[] public nftContracts;
 
     // counter
     uint256 private contracts = 0;
+
+    mapping(address => uint256) private nftContractsIndex;
 
     function createNFTContract(
         string memory _nftName,
@@ -48,6 +57,8 @@ contract DonatyNFTFactory {
     ) public {
         DonatyNFT newNFTContract = new DonatyNFT(_nftName, _tokenName);
         nftContracts.push(newNFTContract);
+
+        nftContractsIndex[address(newNFTContract)] = nftContracts.length - 1;
         contracts = contracts + 1;
         emit newNFTContractCreated(
             msg.sender,
@@ -60,6 +71,7 @@ contract DonatyNFTFactory {
             _stepDivision,
             _ipfsImage
         );
+
         emitEventForStep(
             _descriptionSteps,
             _stepsInitialDate,
@@ -87,4 +99,20 @@ contract DonatyNFTFactory {
             );
         }
     }
+
+    function createCollectibleAndApproveMarket(
+        address nftContract,
+        address owner,
+        string memory _tokenURI,
+        address nftMarketPlace
+    ) public {
+        uint256 nftContractIndex = nftContractsIndex[nftContract];
+        uint256 nftId = nftContracts[nftContractIndex]
+            .createAndApproveCollectible(owner, _tokenURI, nftMarketPlace);
+        emit newNFTMintedAndApproved(owner, nftId, _tokenURI, nftContract);
+    }
+
+    // 1 address
+    // 2 busco por el mapping
+    // 3 nftContracts
 }

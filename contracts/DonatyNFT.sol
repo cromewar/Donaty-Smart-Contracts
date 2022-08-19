@@ -31,6 +31,20 @@ contract DonatyNFT is ERC721Votes, ERC721URIStorage, Ownable {
         return newItemId;
     }
 
+    // Create and approve a new collectible.
+    function createAndApproveCollectible(
+        address owner,
+        string memory _tokenURI,
+        address nftMarketPlace
+    ) public returns (uint256) {
+        uint256 newItemId = _tokenIds.current();
+        _mint(owner, newItemId);
+        _setTokenURI(newItemId, _tokenURI);
+        _tokenIds.increment();
+        _approve(nftMarketPlace, newItemId);
+        return newItemId;
+    }
+
     // Sending the Voting power to the new Owner
 
     function _afterTokenTransfer(
