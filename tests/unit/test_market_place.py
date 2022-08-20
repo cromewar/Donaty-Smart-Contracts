@@ -40,6 +40,7 @@ def test_list_item():
 
 def test_all_market_flux():
     deployer = get_account()
+    account2 = get_account(2)
     nft_factory = DonatyNFTFactory.deploy({"from": deployer})
     time_lock_factory = TimeLockFactory.deploy({"from": deployer})
     governance_factory = DonatyGovernanceFactory.deploy({"from": deployer})
@@ -121,8 +122,21 @@ def test_all_market_flux():
     )
     tx7.wait(1)
 
-    listed_items = marketplace_contract.getListing(donaty_nft.address, 0)
-    print(listed_items)
+    # listed_items = marketplace_contract.getListing(donaty_nft.address, 0)
+    # print(listed_items)
+
+    tx8 = marketplace_contract.buyItem(
+        donaty_nft.address, 0, {"from": account2, "value": PRICE}
+    )
+    tx8.wait(1)
+
+    # tx9 = donaty_nft.approve(marketplace_contract.address, TOKEN_ID, {"from": account2})
+    # tx9.wait(1)
+
+    tx10 = marketplace_contract.listItem(
+        donaty_nft.address, 0, PRICE, {"from": account2}
+    )
+    tx10.wait(1)
 
 
 def test_cant_list_twice():

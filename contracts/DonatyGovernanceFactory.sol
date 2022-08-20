@@ -14,9 +14,16 @@ contract DonatyGovernanceFactory {
     function createNewDao(
         IVotes _token,
         TimelockController _timelock,
-        address nftContract
+        address nftContract,
+        uint256 initVotingPeriod,
+        uint256 proposalThreshhold
     ) public {
-        DonatyGovernor newGovernor = new DonatyGovernor(_token, _timelock);
+        DonatyGovernor newGovernor = new DonatyGovernor(
+            _token,
+            _timelock,
+            initVotingPeriod,
+            proposalThreshhold
+        );
         governors.push(newGovernor);
         emit NewGovernorCreated(address(newGovernor), nftContract);
     }
