@@ -15,12 +15,14 @@ contract DonatyGovernanceFactory {
         IVotes _token,
         TimelockController _timelock,
         address nftContract,
+        uint256 initVotingDelay,
         uint256 initVotingPeriod,
         uint256 proposalThreshhold
     ) public {
         DonatyGovernor newGovernor = new DonatyGovernor(
             _token,
             _timelock,
+            initVotingDelay,
             initVotingPeriod,
             proposalThreshhold
         );

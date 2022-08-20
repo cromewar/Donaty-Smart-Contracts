@@ -19,15 +19,12 @@ contract DonatyGovernor is
     constructor(
         IVotes _token,
         TimelockController _timelock,
+        uint256 initvotingDelay,
         uint256 initVotingPeriod,
         uint256 proposalThreshhold
     )
         Governor("DonatyGovernor")
-        GovernorSettings(
-            1, /* 1 block */
-            initVotingPeriod,
-            proposalThreshhold
-        )
+        GovernorSettings(initvotingDelay, initVotingPeriod, proposalThreshhold)
         GovernorVotes(_token)
         GovernorVotesQuorumFraction(4)
         GovernorTimelockControl(_timelock)
