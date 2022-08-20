@@ -894,60 +894,60 @@
     "absolutePath": "/home/crome/.brownie/packages/OpenZeppelin/openzeppelin-contracts@4.7.2/contracts/governance/extensions/GovernorVotes.sol",
     "exportedSymbols": {
       "Address": [
-        4235
+        4299
       ],
       "Context": [
-        4257
+        4321
       ],
       "DoubleEndedQueue": [
-        7248
+        7312
       ],
       "ECDSA": [
-        4878
+        4942
       ],
       "EIP712": [
-        5032
+        5096
       ],
       "ERC165": [
-        5056
+        5120
       ],
       "Governor": [
-        1989
+        2053
       ],
       "GovernorVotes": [
-        2435
+        3445
       ],
       "IERC1155Receiver": [
-        3922
+        3986
       ],
       "IERC165": [
-        7892
+        7956
       ],
       "IERC721Receiver": [
-        3940
+        4004
       ],
       "IGovernor": [
-        3881
+        3945
       ],
       "IVotes": [
-        7326
+        7710
       ],
       "SafeCast": [
-        6907
+        6971
       ],
       "Strings": [
-        8118
+        8182
       ],
       "Timers": [
-        4471
+        4535
       ]
     },
-    "id": 2436,
+    "id": 3446,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2395,
+        "id": 3405,
         "literals": [
           "solidity",
           "^",
@@ -960,11 +960,11 @@
       {
         "absolutePath": "/home/crome/.brownie/packages/OpenZeppelin/openzeppelin-contracts@4.7.2/contracts/governance/Governor.sol",
         "file": "../Governor.sol",
-        "id": 2396,
+        "id": 3406,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 2436,
-        "sourceUnit": 1990,
+        "scope": 3446,
+        "sourceUnit": 2054,
         "src": "148:25:8",
         "symbolAliases": [],
         "unitAlias": ""
@@ -972,11 +972,11 @@
       {
         "absolutePath": "/home/crome/.brownie/packages/OpenZeppelin/openzeppelin-contracts@4.7.2/contracts/governance/utils/IVotes.sol",
         "file": "../utils/IVotes.sol",
-        "id": 2397,
+        "id": 3407,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 2436,
-        "sourceUnit": 7327,
+        "scope": 3446,
+        "sourceUnit": 7711,
         "src": "174:29:8",
         "symbolAliases": [],
         "unitAlias": ""
@@ -986,13 +986,13 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 2399,
+              "id": 3409,
               "name": "Governor",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 1989,
+              "referencedDeclaration": 2053,
               "src": "405:8:8"
             },
-            "id": 2400,
+            "id": 3410,
             "nodeType": "InheritanceSpecifier",
             "src": "405:8:8"
           }
@@ -1001,23 +1001,23 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "documentation": {
-          "id": 2398,
+          "id": 3408,
           "nodeType": "StructuredDocumentation",
           "src": "205:164:8",
           "text": " @dev Extension of {Governor} for voting weight extraction from an {ERC20Votes} token, or since v4.5 an {ERC721Votes} token.\n _Available since v4.3._"
         },
         "fullyImplemented": false,
-        "id": 2435,
+        "id": 3445,
         "linearizedBaseContracts": [
-          2435,
-          1989,
-          3922,
-          3940,
-          3881,
-          5032,
-          5056,
-          7892,
-          4257
+          3445,
+          2053,
+          3986,
+          4004,
+          3945,
+          5096,
+          5120,
+          7956,
+          4321
         ],
         "name": "GovernorVotes",
         "nameLocation": "388:13:8",
@@ -1026,33 +1026,33 @@
           {
             "constant": false,
             "functionSelector": "fc0c546a",
-            "id": 2403,
+            "id": 3413,
             "mutability": "immutable",
             "name": "token",
             "nameLocation": "444:5:8",
             "nodeType": "VariableDeclaration",
-            "scope": 2435,
+            "scope": 3445,
             "src": "420:29:8",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_IVotes_$7326",
+              "typeIdentifier": "t_contract$_IVotes_$7710",
               "typeString": "contract IVotes"
             },
             "typeName": {
-              "id": 2402,
+              "id": 3412,
               "nodeType": "UserDefinedTypeName",
               "pathNode": {
-                "id": 2401,
+                "id": 3411,
                 "name": "IVotes",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 7326,
+                "referencedDeclaration": 7710,
                 "src": "420:6:8"
               },
-              "referencedDeclaration": 7326,
+              "referencedDeclaration": 7710,
               "src": "420:6:8",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_IVotes_$7326",
+                "typeIdentifier": "t_contract$_IVotes_$7710",
                 "typeString": "contract IVotes"
               }
             },
@@ -1060,56 +1060,56 @@
           },
           {
             "body": {
-              "id": 2413,
+              "id": 3423,
               "nodeType": "Block",
               "src": "489:37:8",
               "statements": [
                 {
                   "expression": {
-                    "id": 2411,
+                    "id": 3421,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 2409,
+                      "id": 3419,
                       "name": "token",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2403,
+                      "referencedDeclaration": 3413,
                       "src": "499:5:8",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_IVotes_$7326",
+                        "typeIdentifier": "t_contract$_IVotes_$7710",
                         "typeString": "contract IVotes"
                       }
                     },
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 2410,
+                      "id": 3420,
                       "name": "tokenAddress",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2406,
+                      "referencedDeclaration": 3416,
                       "src": "507:12:8",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_IVotes_$7326",
+                        "typeIdentifier": "t_contract$_IVotes_$7710",
                         "typeString": "contract IVotes"
                       }
                     },
                     "src": "499:20:8",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IVotes_$7326",
+                      "typeIdentifier": "t_contract$_IVotes_$7710",
                       "typeString": "contract IVotes"
                     }
                   },
-                  "id": 2412,
+                  "id": 3422,
                   "nodeType": "ExpressionStatement",
                   "src": "499:20:8"
                 }
               ]
             },
-            "id": 2414,
+            "id": 3424,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
@@ -1117,38 +1117,38 @@
             "nameLocation": "-1:-1:-1",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2407,
+              "id": 3417,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2406,
+                  "id": 3416,
                   "mutability": "mutable",
                   "name": "tokenAddress",
                   "nameLocation": "475:12:8",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2414,
+                  "scope": 3424,
                   "src": "468:19:8",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_IVotes_$7326",
+                    "typeIdentifier": "t_contract$_IVotes_$7710",
                     "typeString": "contract IVotes"
                   },
                   "typeName": {
-                    "id": 2405,
+                    "id": 3415,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 2404,
+                      "id": 3414,
                       "name": "IVotes",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 7326,
+                      "referencedDeclaration": 7710,
                       "src": "468:6:8"
                     },
-                    "referencedDeclaration": 7326,
+                    "referencedDeclaration": 7710,
                     "src": "468:6:8",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IVotes_$7326",
+                      "typeIdentifier": "t_contract$_IVotes_$7710",
                       "typeString": "contract IVotes"
                     }
                   },
@@ -1158,12 +1158,12 @@
               "src": "467:21:8"
             },
             "returnParameters": {
-              "id": 2408,
+              "id": 3418,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "489:0:8"
             },
-            "scope": 2435,
+            "scope": 3445,
             "src": "456:70:8",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -1171,10 +1171,10 @@
           },
           {
             "baseFunctions": [
-              1089
+              1153
             ],
             "body": {
-              "id": 2433,
+              "id": 3443,
               "nodeType": "Block",
               "src": "812:64:8",
               "statements": [
@@ -1182,11 +1182,11 @@
                   "expression": {
                     "arguments": [
                       {
-                        "id": 2429,
+                        "id": 3439,
                         "name": "account",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2417,
+                        "referencedDeclaration": 3427,
                         "src": "848:7:8",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1194,11 +1194,11 @@
                         }
                       },
                       {
-                        "id": 2430,
+                        "id": 3440,
                         "name": "blockNumber",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2419,
+                        "referencedDeclaration": 3429,
                         "src": "857:11:8",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1218,32 +1218,32 @@
                         }
                       ],
                       "expression": {
-                        "id": 2427,
+                        "id": 3437,
                         "name": "token",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2403,
+                        "referencedDeclaration": 3413,
                         "src": "829:5:8",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_IVotes_$7326",
+                          "typeIdentifier": "t_contract$_IVotes_$7710",
                           "typeString": "contract IVotes"
                         }
                       },
-                      "id": 2428,
+                      "id": 3438,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "getPastVotes",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7287,
+                      "referencedDeclaration": 7671,
                       "src": "829:18:8",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$_t_address_$_t_uint256_$returns$_t_uint256_$",
                         "typeString": "function (address,uint256) view external returns (uint256)"
                       }
                     },
-                    "id": 2431,
+                    "id": 3441,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1258,20 +1258,20 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 2426,
-                  "id": 2432,
+                  "functionReturnParameters": 3436,
+                  "id": 3442,
                   "nodeType": "Return",
                   "src": "822:47:8"
                 }
               ]
             },
             "documentation": {
-              "id": 2415,
+              "id": 3425,
               "nodeType": "StructuredDocumentation",
               "src": "532:114:8",
               "text": " Read the voting weight from the token's built in snapshot mechanism (see {Governor-_getVotes})."
             },
-            "id": 2434,
+            "id": 3444,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -1279,23 +1279,23 @@
             "nameLocation": "660:9:8",
             "nodeType": "FunctionDefinition",
             "overrides": {
-              "id": 2423,
+              "id": 3433,
               "nodeType": "OverrideSpecifier",
               "overrides": [],
               "src": "785:8:8"
             },
             "parameters": {
-              "id": 2422,
+              "id": 3432,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2417,
+                  "id": 3427,
                   "mutability": "mutable",
                   "name": "account",
                   "nameLocation": "687:7:8",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2434,
+                  "scope": 3444,
                   "src": "679:15:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1304,7 +1304,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2416,
+                    "id": 3426,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "679:7:8",
@@ -1318,12 +1318,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 2419,
+                  "id": 3429,
                   "mutability": "mutable",
                   "name": "blockNumber",
                   "nameLocation": "712:11:8",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2434,
+                  "scope": 3444,
                   "src": "704:19:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1332,7 +1332,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2418,
+                    "id": 3428,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "704:7:8",
@@ -1345,12 +1345,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 2421,
+                  "id": 3431,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2434,
+                  "scope": 3444,
                   "src": "733:12:8",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1359,7 +1359,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 2420,
+                    "id": 3430,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "733:5:8",
@@ -1374,17 +1374,17 @@
               "src": "669:93:8"
             },
             "returnParameters": {
-              "id": 2426,
+              "id": 3436,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2425,
+                  "id": 3435,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2434,
+                  "scope": 3444,
                   "src": "803:7:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1393,7 +1393,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2424,
+                    "id": 3434,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "803:7:8",
@@ -1407,17 +1407,17 @@
               ],
               "src": "802:9:8"
             },
-            "scope": 2435,
+            "scope": 3445,
             "src": "651:225:8",
             "stateMutability": "view",
             "virtual": true,
             "visibility": "internal"
           }
         ],
-        "scope": 2436,
+        "scope": 3446,
         "src": "370:508:8",
         "usedErrors": [
-          6914
+          6978
         ]
       }
     ],
