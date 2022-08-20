@@ -155,7 +155,7 @@ contract NftMarketPlace is ReentrancyGuard, Ownable {
         }
 
         uint256 sellerProfit = msg.value.div(5);
-        uint256 projectProfit = msg.value.mul(100).div(80);
+        uint256 projectProfit = msg.value - sellerProfit;
         s_proceeds[address(this)] += projectProfit;
         s_proceeds[listedItem.seller] += sellerProfit;
         delete (s_listings[nftAddress][tokenId]);
@@ -165,6 +165,7 @@ contract NftMarketPlace is ReentrancyGuard, Ownable {
             msg.sender,
             tokenId
         );
+        withdrawProceeds(listedItem.seller);
         emit ItemBought(msg.sender, nftAddress, tokenId, listedItem.price);
     }
 
@@ -191,13 +192,13 @@ contract NftMarketPlace is ReentrancyGuard, Ownable {
     /*
      * @notice Method for withdrawing proceeds from sales
      */
-    function withdrawProceeds() external {
-        uint256 proceeds = s_proceeds[msg.sender];
+    function withdrawProceeds(address seller) internal {
+        uint256 proceeds = s_proceeds[seller];
         if (proceeds <= 0) {
             revert NoProceeds();
         }
-        s_proceeds[msg.sender] = 0;
-        (bool success, ) = payable(msg.sender).call{value: proceeds}("");
+        s_proceeds[seller] = 0;
+        (bool success, ) = payable(seller).call{value: proceeds}("");
         require(success, "Transfer failed");
     }
 

@@ -17,7 +17,7 @@ import pytest
 
 
 TOKEN_ID = 0
-PRICE = Web3.toWei(0.1, "ether")
+PRICE = Web3.toWei(1, "ether")
 ZERO_ADDRESS = "0x0000000000000000000000000000000000000000"
 
 
@@ -40,6 +40,7 @@ def test_list_item():
 
 def test_all_market_flux():
     deployer = get_account()
+    print(f"balance of deployer is {Web3.fromWei(deployer.balance(), 'ether')}")
     account2 = get_account(2)
     nft_factory = DonatyNFTFactory.deploy({"from": deployer})
     time_lock_factory = TimeLockFactory.deploy({"from": deployer})
@@ -75,7 +76,13 @@ def test_all_market_flux():
     )
 
     tx3 = governance_factory.createNewDao(
-        donaty_nft.address, time_lock.address, donaty_nft.address, {"from": deployer}
+        donaty_nft.address,
+        time_lock.address,
+        donaty_nft.address,
+        1,
+        17280,
+        0,
+        {"from": deployer},
     )
     tx3.wait(1)
 
@@ -130,13 +137,19 @@ def test_all_market_flux():
     )
     tx8.wait(1)
 
+    balance_of_contract = marketplace_contract.getBalance()
+    print(
+        f"The balance of the contract is {Web3.fromWei(balance_of_contract, 'ether')}"
+    )
+
+    print(f"balance of deployer is {Web3.fromWei(deployer.balance(), 'ether')}")
     # tx9 = donaty_nft.approve(marketplace_contract.address, TOKEN_ID, {"from": account2})
     # tx9.wait(1)
 
-    tx10 = marketplace_contract.listItem(
-        donaty_nft.address, 0, PRICE, {"from": account2}
-    )
-    tx10.wait(1)
+    # tx10 = marketplace_contract.listItem(
+    #     donaty_nft.address, 0, PRICE, {"from": account2}
+    # )
+    # tx10.wait(1)
 
 
 def test_cant_list_twice():
