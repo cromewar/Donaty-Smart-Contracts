@@ -37,4 +37,6 @@ Open the `.env.example` file and replace the keys for your own, you must provide
 
 **IMPORTANT NOTE**
 
-Do not use you wallet private key
+Do not use your wallet private key without knowing the risks, is 100% recommended to use a wallet without real assets for testing and velopment porpuses
+
+## Showcase
