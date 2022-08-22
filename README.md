@@ -2,6 +2,9 @@
 
 Smart Contracts for Donaty Project on Polygon Hackathon.
 
+Live Demo: http://donaty-web-app.s3-website-us-east-1.amazonaws.com/#/
+**Note:** Be sure to use Polygon Mumbai Network.
+
 Donaty is the ultimate platform for Charities and Non-Profit organizations, allowing entities to create real impact projects on their communities and countries. NFT Artists can contribute to a charity proposal, selling their art and engaging into an Autonomous Decentralized Organization (DAO), NFT owners of each project will vote to decide if the funding is being used correctly as the charity responsible will have to upload regular updates stating the progress of their campaign.
 
 ## Important Links
@@ -20,6 +23,8 @@ Donaty is the ultimate platform for Charities and Non-Profit organizations, allo
 - Ganache
 
 ## How to run
+
+**IMPORTANT:** For live testing be use to use Mumbai Network.
 
 1. Clone the repository.
 
